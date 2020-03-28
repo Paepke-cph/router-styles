@@ -1,35 +1,31 @@
 /*
-This is the Full-height Fixed Vertical Navbar
+This is the Horizontal Navigation Bar Example with Active/Current Navigation Link
 From here https://www.w3schools.com/css/css_navbar.asp
 */
 
-ul {
+ul.header {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+  overflow: hidden;
+  background-color: #333;
 }
 
-li a {
+ul.header li {
+  float: left;
+}
+
+ul.header li a {
   display: block;
-  color: #000;
-  padding: 8px 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
-
-li a.active {
-  background-color: #4CAF50;
-  color: white;
+ul.header li a:hover:not(.active) {
+  background-color: #111;
 }
 
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-.content {
-  margin-left:25%;padding:1px 16px;height:1000px;
+.active {
+  background-color: #4caf50;
 }
